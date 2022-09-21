@@ -20,8 +20,15 @@ public class ParseIntegers {
         int sum = 0;
         String justWords = "";
         while (words.hasNext()) {
-            String next = words.next();
-            int number = Integer.parseInt(next);
+            try {
+                String next = words.next();
+                if (next.matches("\\d")) {
+                    int number = Integer.parseInt(next);
+                    sum += number;
+                }
+            }catch (NumberFormatException e){
+                e.printStackTrace();
+            }
             // todo: complete it
         }
         System.out.println("Sum is " + sum);
