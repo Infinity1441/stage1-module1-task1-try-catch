@@ -25,12 +25,13 @@ public class ParseIntegers {
                 if (next.matches("\\d")) {
                     int number = Integer.parseInt(next);
                     sum += number;
-                }
-            }catch (NumberFormatException e){
+                } else justWords = justWords.concat(next + ' ');
+            } catch (NumberFormatException e) {
                 e.printStackTrace();
             }
             // todo: complete it
         }
+        justWords = justWords.substring(0, justWords.length() - 1);
         System.out.println("Sum is " + sum);
         System.out.println("Just words:" + justWords);
     }
