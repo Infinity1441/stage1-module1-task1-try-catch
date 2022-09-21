@@ -30,8 +30,10 @@ public class ParseIntegers {
         } catch (NumberFormatException e) {
             e.printStackTrace();
         }
+
         // todo: complete it
         justWords = justWords.substring(0, justWords.length() - 1);
+        justWords = ' ' + justWords;
         System.out.println("Sum is " + sum);
         System.out.println("Just words:" + justWords);
     }
