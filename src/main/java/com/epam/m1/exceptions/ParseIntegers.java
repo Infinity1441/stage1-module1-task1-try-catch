@@ -26,14 +26,14 @@ public class ParseIntegers {
                     int number = Integer.parseInt(next);
                     sum += number;
                 } else justWords = justWords.concat(next + ' ');
+                justWords = justWords.substring(0, justWords.length() - 1);
+                System.out.println("Sum is " + sum);
+                System.out.println("Just words:" + justWords);
             } catch (NumberFormatException e) {
                 e.printStackTrace();
             }
             // todo: complete it
         }
-        justWords = justWords.substring(0, justWords.length() - 1);
-        System.out.println("Sum is " + sum);
-        System.out.println("Just words:" + justWords);
     }
 }
 
